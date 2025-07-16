@@ -1,7 +1,9 @@
+import { Note } from "../models/note";
+
 export default class NotesController {
     constructor() {
     }
-    private notes: { id: number; title: string; content: string }[] = [];
+    private notes: Note[] = [];
     private nextId: number = 1;
 
     getAllNotes(req: any, res: { json: (arg0: { id: number; title: string; content: string; }[]) => void; }) {
